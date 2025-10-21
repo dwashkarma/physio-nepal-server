@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "physios",
+  "info": {
+    "singularName": "physio",
+    "pluralName": "physios",
+    "displayName": "Physio"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "display_name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Available": {
+      "type": "boolean"
+    },
+    "description": {
+      "type": "text"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::category.category"
+    }
+  }
+}
