@@ -16,16 +16,29 @@
       "required": true,
       "unique": true
     },
-    "Available": {
+    "available": {
       "type": "boolean"
     },
     "description": {
       "type": "text"
     },
-    "categories": {
+    "price": {
+      "type": "decimal"
+    },
+    "category": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::category.category"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     }
   }
 }
